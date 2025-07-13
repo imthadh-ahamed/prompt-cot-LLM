@@ -1,0 +1,13 @@
+prompt_id,prompt_text,prompt_type,response,response_length,response_time,timestamp,model_name,temperature,cost_estimate,quality_score
+a_b_test_1,"Analyze the following problem and provide a solution:
+
+How can a small business improve customer retention in a competitive market?",Prompt_A,"Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",35,2.4570980072021484,2025-07-12 01:05:16.551679,gpt-3.5-turbo,0.7,0.0,
+a_b_test_2,"You are a problem-solving expert. Break down this challenge step-by-step and recommend the best approach:
+
+How can a small business improve customer retention in a competitive market?",Prompt_B,"Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",35,2.5632364749908447,2025-07-12 01:05:19.114950,gpt-3.5-turbo,0.7,0.0,
+a_b_test_3,"Analyze the following problem and provide a solution:
+
+How can a small business improve customer retention in a competitive market?",Prompt_A,"Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",35,2.485590696334839,2025-07-12 01:05:21.600949,gpt-3.5-turbo,0.7,0.0,
+a_b_test_4,"You are a problem-solving expert. Break down this challenge step-by-step and recommend the best approach:
+
+How can a small business improve customer retention in a competitive market?",Prompt_B,"Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",35,3.0202341079711914,2025-07-12 01:05:24.621216,gpt-3.5-turbo,0.7,0.0,
