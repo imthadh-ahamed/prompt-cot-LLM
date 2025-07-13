@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./data/experiments.db
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - CORS_ORIGINS=http://localhost:3000,http://frontend:3000
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./data:/app/data
+      - ./backend:/app
+    networks:
+      - prompt-cot-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    env_file:
+      - ./frontend/.env.local
+    depends_on:
+      - backend
+    networks:
+      - prompt-cot-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  prompt-cot-data:
+
+networks:
+  prompt-cot-network:
+    driver: bridge
